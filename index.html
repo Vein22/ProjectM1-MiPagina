@@ -3,9 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <title>Mi Pagina de Presentación</title>
 </head>
 <body>
-    <h1>Proyecto M1</h1>
+    <header>
+        <h1>Melvin Mora</h1>
+        <h2>Mi pagina web</h2>  
+    </header>
+
+    <section id="sobre-mi">
+        <h2>¿Quién soy?</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat veritatis eveniet illo alias vitae aliquam est mollitia! Tempora cumque illum aliquam. Maiores incidunt ipsam consectetur quis voluptatibus earum sint similique?</p>
+    </section>
+
+    <section id="mis-tecnologías">
+        <h2>Mis tecnologías favoritas</h2>
+        <div class="tecnologia">
+            <p>HTML</p>
+            <img src="assets/img/html-logo.png" alt="HTML Logo">
+        </div>
+        <div class="tecnologia">
+            <p>CSS</p>
+            <img src="assets/img/css-logo.png" alt="CSS Logo">
+        </div>
+        <div class="tecnologia">
+            <p>JavaScript</p>
+            <img src="assets/img/JavaScript-logo.png" alt="JS Logo">
+        </div>
+    </section>
+
+    <section id="mis-actividades">
+        <h2>Mis Activididades Favoritas</h2>
+        <form id="actividad-form">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" required>
+
+            <label for="descripcion">Descripción:</label>
+            <textarea name="descripcion" id="descripcion" required></textarea>
+
+            <label for="url-imagen">URL de Imagen:</label>
+            <input type="url" name="url-imagen" id="url-imagen" required>
+
+            <button type="button" onclick="agregarActividad()">Agregar Actividad:</button>
+        </form>
+
+        <div id="actividades-container"></div>
+    </section>
+
+    <script src="scripts/index.js"></script>
 </body>
 </html>

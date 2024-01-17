@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tecnologia {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+.tecnologia img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+#actividad-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#actividad-form label,
+#actividad-form textarea,
+#actividad-form input {
+    margin-bottom: 10px;
+}
+
+#actividades-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.actividad-card {
+    flex: 0 0 30%;
+    margin: 10px;
+    padding: 10px;
+    background-color: #ddd;
+    border-radius: 8px;
+}
+
+.actividad-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
