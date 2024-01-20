@@ -33,6 +33,10 @@ section {
     margin-bottom: 5px;
 }
 
+.tecnologia:hover{
+    scale: 1.2;
+}
+
 #actividad-form {
     display: flex;
     flex-direction: column;
