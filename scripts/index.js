@@ -1,18 +1,26 @@
-function agregarActividad() {
-    const titulo = document.getElementById('titulo').value;
-    const descripcion = document.getElementById('descripcion').value;
-    const urlImagen = document.getElementById('url-imagen').value;
+class Activity {
+    constructor(id, title, description, imgUrl) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.imgUrl = imgUrl;
+    }
+}
 
-    const actividadCard = document.createElement('div');
-    actividadCard.className = 'actividad-card';
-    actividadCard.innerHTML = `
-        <h3>${titulo}</h3>
-        <p>${descripcion}</p>
-        <img src="${urlImagen}" alt="${titulo}">
-    `;
+class Repository {
+    constructor(activities) {
+        this.activities = activities;
+    }
 
-    const actividadesContainer = document.getElementById('actividades-container');
-    actividadesContainer.appendChild(actividadCard);
+    getAllActivities(){
+        return [this.activities]
+    }
 
-    document.getElementById('actividad-form').reset();
+    createActivities(){
+
+    }
+
+    deleteActivity(){
+        
+    }
 }
