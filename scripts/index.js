@@ -8,19 +8,32 @@ class Activity {
 }
 
 class Repository {
-    constructor(activities) {
-        this.activities = activities;
+    constructor() {
+        this.activities = [];
     }
 
     getAllActivities(){
-        return [this.activities]
+        return this.activities
     }
 
-    createActivities(){
-
+    createActivity(id, title, description, imgUrl){
+        const nuevaActividad = new Activity(id, title, description, imgUrl);
+        this.activities.push(nuevaActividad);
     }
 
-    deleteActivity(){
-        
+    deleteActivity(id){
+        this.activities = this.activities.filter((e)=>e.id !== id)
     }
 }
+
+const nuevo = new Repository();
+
+nuevo.createActivity(1, "Comida", "Comer es sano", "imgen-url");
+nuevo.createActivity(2, "Correr", "Da beneficios animicos", "imgen-url2");
+
+console.log(nuevo.getAllActivities())
+
+nuevo.deleteActivity(1)
+
+
+
