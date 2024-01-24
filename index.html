@@ -38,15 +38,15 @@
         <h2>Mis Activididades Favoritas</h2>
         <form id="actividad-form">
             <label for="titulo">Título:</label>
-            <input type="text" id="titulo" name="titulo" required>
+            <input type="text" id="inputTitle" name="titulo" required>
 
             <label for="descripcion">Descripción:</label>
-            <textarea name="descripcion" id="descripcion" required></textarea>
+            <textarea name="descripcion" id="inputDescription" required></textarea>
 
             <label for="url-imagen">URL de Imagen:</label>
-            <input type="url" name="url-imagen" id="url-imagen" required>
+            <input type="url" name="url-imagen" id="inputImgUrl" required>
 
-            <button type="button" onclick="agregarActividad()">Agregar Actividad:</button>
+            <button type="button" id="agregarActividadBtn">Agregar Actividad:</button>
         </form>
 
         <div id="actividades-container"></div>
