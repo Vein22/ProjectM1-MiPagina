@@ -49,6 +49,7 @@ class Repository {
         botonEliminar.innerHTML = 'Eliminar';
         botonEliminar.dataset.id = id;
 
+        // Boton para eliminar tarjetas
         botonEliminar.addEventListener('click', () => {
             this.deleteActivity(id);
             this.renderizarActividadesEnContenedor();
