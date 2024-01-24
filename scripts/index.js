@@ -81,7 +81,6 @@ class Repository {
         elementosHTML.forEach(element => contenedor.appendChild(element));
     }
 
-    // handler ahora es un método de la clase Repository
     agregarActividadHandler() {
 
         // Seleccionar los inputs
