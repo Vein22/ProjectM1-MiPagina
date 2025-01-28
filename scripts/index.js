@@ -111,15 +111,36 @@ class Repository {
         inputImgUrl.value = '';
     }
 
+   
     // Agregar Event Listener al botón de agregar actividad
     iniciarEventos() {
-        const agregarActividad = document.getElementById('agregarActividadBtn');
-        // Agregar Event Listener, usando bind para mantener el contexto correcto (this)
-        agregarActividad.addEventListener('click', this.agregarActividadHandler.bind(this));
+        // Verificar si estamos en un entorno de navegador antes de acceder al DOM
+        if (typeof document !== 'undefined') {
+            const agregarActividad = document.getElementById('agregarActividadBtn');
+
+            // Verificar si el botón existe antes de intentar agregar el Event Listener
+            if (agregarActividad) {
+                // Agregar Event Listener, usando bind para mantener el contexto correcto (this)
+                agregarActividad.addEventListener('click', this.agregarActividadHandler.bind(this));
+            }
+        }
     }
 }
 
+
+
 const test = new Repository();
 test.iniciarEventos();
+
+
+
+
+
+
+module.exports = {
+    Activity, 
+    Repository,
+};
+
 
 
